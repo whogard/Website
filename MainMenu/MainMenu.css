@@ -1,0 +1,153 @@
+a {
+    text-decoration: none;
+    color: #fff  
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.navbar .logolar {
+    margin-top: -5px;
+}
+
+.navbar .logo {
+    font-size: 23px;
+    font-weight: 700; 
+    margin-left: 10px;
+}
+
+.navbar .resim {
+    height: 40px; 
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none; 
+    margin-left: 35px
+}
+
+.navbar ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.navbar ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbar ul li a {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 50px 50px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.info h1 {
+    font-size: 50px;
+}
+
+.info p {
+    margin: 10px 0 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: lightgray;
+}
+
+.navbar .btnLogin {
+    width: 90px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 50;
+    margin-left: 40px;
+    margin-top: -5px;
+    transition: color 0.2s;
+}
+
+.navbar .btnLogin:hover {
+    color: lightgray;
+}
+
+.navbar .btnRegister {
+    width: 90px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 50;
+    margin-left: 10px;
+    margin-top: -1px;
+    transition: color 0.2s;
+    transition: border 0.2s;
+}
+
+.navbar .btnRegister:hover {
+    color: lightgray;
+    border: 2px solid lightgray;   
+}
+
+.navbar .vertical-line {
+    width: 1px;
+    height: 30px;
+    background-color: #fff;
+    display: inline-block;
+    margin-left: 50px; 
+  }
+  
+
+
+
+
+
