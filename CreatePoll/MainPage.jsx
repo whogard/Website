@@ -1,77 +1,44 @@
-import React, { useState } from 'react';
+import React from 'react'
 import './MainPage.css';
 import logo from '../Assets/P.png';
 
 const MainPage = () => {
-  const [inputBoxes, setInputBoxes] = useState([
-    { date: '', time: '' },
-    { date: '', time: '' },
-    { date: '', time: '' },
-  ]);
-
-  const handleInputChange = (index, field, value) => {
-    const updatedBoxes = [...inputBoxes];
-    updatedBoxes[index][field] = value;
-    setInputBoxes(updatedBoxes);
-
-    if ((index === inputBoxes.length - 1) && updatedBoxes[index].date && updatedBoxes[index].time && inputBoxes.length < 10) {
-      setInputBoxes([
-        ...updatedBoxes,
-        { date: '', time: '' },
-      ]);
-    }
-  };
-
   return (
     <div>
-      <nav className="navbar">
-        <ul className="logolar">
-          <img src={logo} alt="" className="resim" />
-        </ul>
+        <nav class="navbar">   
+            <ul className='logolar'>
+                <img src={logo} alt="" className='resim'/>       
+                
+            </ul> 
 
-        <ul>
-          <button className="btnLogin">Giriş Yap</button>
-          <button className="btnRegister">Kayıt Ol</button>
-        </ul>
-      </nav>
+            <ul>
+                <button class="btnLogin">Giriş Yap</button>         
+                <button class="btnRegister">Kayıt Ol</button>        
+            </ul>   
 
-      <div className="content">
-        <div className="info">
-          <div className="question">
-            <input
-              type="text"
-              placeholder="Enter question here, add options below"
-              required
-            />
-          </div>
-          <div className="vertical-line"></div>
+        </nav>
 
-          {}
-          {inputBoxes.map((box, index) => (
-            <div className="input-box" key={index}>
-              <input
-                type="date"
-                placeholder="Select Date"
-                value={box.date}
-                onChange={(e) => handleInputChange(index, 'date', e.target.value)}
-                required
-              />
-              <input
-                type="time"
-                placeholder="Select Time"
-                value={box.time}
-                onChange={(e) => handleInputChange(index, 'time', e.target.value)}
-                required
-              />
+        <div class="content">
+            <div class="info"> 
+                <h1>Enter question here, add options below</h1>
+                <div class="vertical-line"></div>
+                <div className="input-box">
+                    <input type="text" placeholder='Option 1' required/>
+                </div>
+                <div className="input-box">
+                    <input type="text" placeholder='Option 2' required/>
+                </div>
+                <div className="input-box">
+                    <input type="text" placeholder='Option 3'/>
+                </div>
+
+                <button class="settings">Poll Settings +</button>
+                
             </div>
-          ))}
-
-          <button className="settings">Poll Settings +</button>
-          <a href="#" className="btn">Create Poll</a>
-        </div>
-      </div>
+            <a href="#" class="btn">Create Poll</a>
+        </div>       
     </div>
-  );
-};
+  )
+}
 
-export default MainPage;
+export default MainPage

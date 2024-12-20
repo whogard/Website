@@ -144,30 +144,32 @@ a {
 
   
 
-.content .question {
+
+
+
+
+
+
+
+
+.content .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 20px 0;
-    margin-bottom: -10px;
 }
 
-.question input {
+.input-box input {
     width: 100%;
     height: 100%;
     background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
     outline: none;
-    font-size: 28px;
+    border-radius: 7px;
+    font-size: 16px;
     color: #fff;
-    padding: 10px 45px 20px 0px;
+    padding: 20px 45px 20px 20px;
 }
-
-
-
-
-
-
-
 
 
 .content .vertical-line {
@@ -203,9 +205,8 @@ a {
 
 .content .btn {
     position: fixed;
+    margin-top: 400px;
     justify-content: center;
-    margin-left: 100px;
-    margin-top: 50px;
 }
 
 /* .content .info{
@@ -219,38 +220,3 @@ a {
     height: 300px;
     margin-bottom: -50px;
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-.content .input-box {
-    position: relative;
-    margin: 20px 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    outline: none;
-    border-radius: 7px;
-    font-size: 16px;
-    color: #fff;
-    padding: 12px;
-}
-
-.input-box input {
-    height: 100%;
-    background-color: transparent;
-    outline: none;
-    font-size: 16px;
-    color: #fff;
-    margin-left: 10px;
-}
